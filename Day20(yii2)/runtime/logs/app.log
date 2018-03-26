@@ -1,0 +1,518 @@
+2018-03-23 14:33:50 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1049] Unknown database 'yii2' in C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Connection.php:687
+Stack trace:
+#0 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#3 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#5 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#6 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\mysql\Schema.php(312): yii\db\Command->queryAll()
+#8 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#10 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#11 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\console\controllers\MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#12 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#13 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#14 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#15 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#16 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#18 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#19 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#20 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#21 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#22 C:\OSPanel\domains\test2.dz\yii(20): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1049] Unknown database 'yii2' in C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Connection.php:624
+Stack trace:
+#0 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Connection.php(996): yii\db\Connection->open()
+#1 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Command.php(253): yii\db\Connection->getSlavePdo()
+#3 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Command.php(1143): yii\db\Command->prepare(true)
+#4 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\mysql\Schema.php(312): yii\db\Command->queryAll()
+#6 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\mysql\Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Schema.php(744): yii\db\mysql\Schema->loadTableSchema('migration')
+#8 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\Schema.php(194): yii\db\Schema->getTableMetadata('{{%migration}}', 'schema', true)
+#9 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\console\controllers\MigrateController.php(210): yii\db\Schema->getTableSchema('{{%migration}}', true)
+#10 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(875): yii\console\controllers\MigrateController->getMigrationHistory(NULL)
+#11 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(166): yii\console\controllers\BaseMigrateController->getNewMigrations()
+#12 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#13 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#15 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\console\Controller.php(148): yii\base\Controller->runAction('', Array)
+#16 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Module.php(528): yii\console\Controller->runAction('', Array)
+#17 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\console\Application.php(180): yii\base\Module->runAction('migrate', Array)
+#18 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\console\Application.php(147): yii\console\Application->runAction('migrate', Array)
+#19 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 C:\OSPanel\domains\test2.dz\yii(20): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-03-23 14:33:50 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'ANSICON' => '129x32766 (129x16)'
+    'ANSICON_DEF' => '7'
+    'APPDATA' => 'C:\\Users\\Admin\\AppData\\Roaming'
+    'CommonProgramFiles' => 'C:\\Program Files\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'WIN-CGSGDLDFHMC'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'ConEmuANSI' => 'ON'
+    'ConEmuAnsiLog' => ''
+    'ConEmuArgs' => '/Single'
+    'ConEmuArgs2' => ''
+    'ConEmuBackHWND' => '0x001B03CC'
+    'ConEmuBaseDir' => 'C:\\ospanel\\modules\\conemu\\ConEmu'
+    'ConEmuBaseDirShort' => 'C:\\OSPanel\\modules\\conemu\\ConEmu'
+    'ConEmuBuild' => '171109'
+    'ConEmuCfgDir' => 'C:\\ospanel\\modules\\conemu'
+    'ConEmuConfig' => ''
+    'ConEmuDir' => 'C:\\ospanel\\modules\\conemu'
+    'ConEmuDrawHWND' => '0x0001040E'
+    'ConEmuDrive' => 'C:'
+    'ConEmuHooks' => 'Enabled'
+    'ConEmuHWND' => '0x000403E4'
+    'ConEmuIsAdmin' => 'ADMIN'
+    'ConEmuPalette' => '<ConEmu>'
+    'ConEmuPID' => '3920'
+    'ConEmuPrompt0' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S'
+    'ConEmuPrompt1' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m'
+    'ConEmuPrompt2' => '$_$E[90m$$'
+    'ConEmuPrompt3' => '$E[m$S$E]9;12$E\\'
+    'ConEmuServerPID' => '2504'
+    'ConEmuTask' => '{Shells::cmd}'
+    'ConEmuWorkDir' => 'c:\\ospanel'
+    'ConEmuWorkDrive' => 'c:'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOME' => 'c:\\ospanel'
+    'HOMEDRIVE' => 'c:'
+    'HOMEPATH' => '\\ospanel'
+    'LOCALAPPDATA' => 'C:\\Users\\Admin\\AppData\\Local'
+    'LOGONSERVER' => '\\\\WIN-CGSGDLDFHMC'
+    'MOZ_PLUGIN_PATH' => 'C:\\Program Files (x86)\\Foxit Reader\\plugins\\'
+    'NUMBER_OF_PROCESSORS' => '2'
+    'OPENSSL_CONF' => 'c:\\ospanel\\modules\\http\\Apache-PHP-7-x64\\conf\\openssl.cnf'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\ospanel\\modules\\conemu\\ConEmu\\Scripts;C:\\ospanel\\modules\\conemu;C:\\ospanel\\modules\\conemu\\ConEmu;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.0-x64;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHPBIN' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\php.exe'
+    'PHPDIR' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\'
+    'PHPRC' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64'
+    'PHP_BIN' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\php.exe'
+    'PHP_BINARY' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\php.exe'
+    'PHP_BINDIR' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\'
+    'PHP_DIR' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\'
+    'PHP_INI' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\php.ini'
+    'PHP_PEAR_BIN_DIR' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\PEAR'
+    'PHP_PEAR_DATA_DIR' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\PEAR\\data'
+    'PHP_PEAR_DOC_DIR' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\PEAR\\docs'
+    'PHP_PEAR_INSTALL_DIR' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\PEAR\\pear'
+    'PHP_PEAR_PHP_BIN' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\php.exe'
+    'PHP_PEAR_SYSCONF_DIR' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\PEAR'
+    'PHP_PEAR_TEST_DIR' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\PEAR\\tests'
+    'PROCESSOR_ARCHITECTURE' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 158 Stepping 9, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '9e09'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$E[m$E[32m$E]9;8;\"USERNAME\"$E\\@$E]9;8;\"COMPUTERNAME\"$E\\$S$E[92m$P$E[90m$_$E[90m$$$E[m$S$E]9;12$E\\'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'c:\\ospanel\\userdata\\temp'
+    'TMP' => 'c:\\ospanel\\userdata\\temp'
+    'USERDOMAIN' => 'WIN-CGSGDLDFHMC'
+    'USERNAME' => 'Admin'
+    'USERPROFILE' => 'C:\\Users\\Admin'
+    'VBOX_INSTALL_PATH' => 'C:\\Program Files\\Oracle\\VirtualBox\\'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1521804830.8068
+    'REQUEST_TIME' => 1521804830
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2018-03-23 14:59:52 [127.0.0.1][-][ff8jhp3e56763rui2f00psh882][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "gii/index". in C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('gii/index', Array)
+#1 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\OSPanel\domains\test2.dz\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OSPanel\domains\test2.dz\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2018-03-23 14:59:52 [127.0.0.1][-][ff8jhp3e56763rui2f00psh882][info][application] $_GET = [
+    'r' => 'gii/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ff8jhp3e56763rui2f00psh882'
+    '_csrf' => '0b65a778ef125b3c381307ef4897b06ac19de8ff3ec545bf83c2f3ad6e73fc0ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kWiWjc2cMviL7y3nlraetOq6lGM3StlQ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'test2.dz'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=ff8jhp3e56763rui2f00psh882; _csrf=0b65a778ef125b3c381307ef4897b06ac19de8ff3ec545bf83c2f3ad6e73fc0ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kWiWjc2cMviL7y3nlraetOq6lGM3StlQ%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.0-x64;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'test2.dz'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/test2.dz'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/test2.dz'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/test2.dz/web/index.php'
+    'REMOTE_PORT' => '2714'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii%2Findex'
+    'REQUEST_URI' => '/web/index.php?r=gii%2Findex'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1521806392.115
+    'REQUEST_TIME' => 1521806392
+    'argv' => [
+        0 => 'r=gii%2Findex'
+    ]
+    'argc' => 1
+]
+2018-03-23 15:13:02 [127.0.0.1][-][ff8jhp3e56763rui2f00psh882][error][ParseError] ParseError: syntax error, unexpected '}', expecting ';' in C:\OSPanel\domains\test2.dz\views\site\index.php:28
+Stack trace:
+#0 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#1 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(app\controllers\SiteController))
+#2 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#3 C:\OSPanel\domains\test2.dz\controllers\SiteController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\SiteController->actionIndex()
+#5 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#8 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#9 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\OSPanel\domains\test2.dz\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2018-03-23 15:13:02 [127.0.0.1][-][ff8jhp3e56763rui2f00psh882][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ff8jhp3e56763rui2f00psh882'
+    '_csrf' => '0b65a778ef125b3c381307ef4897b06ac19de8ff3ec545bf83c2f3ad6e73fc0ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kWiWjc2cMviL7y3nlraetOq6lGM3StlQ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'test2.dz'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=ff8jhp3e56763rui2f00psh882; _csrf=0b65a778ef125b3c381307ef4897b06ac19de8ff3ec545bf83c2f3ad6e73fc0ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kWiWjc2cMviL7y3nlraetOq6lGM3StlQ%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.0-x64;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'test2.dz'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/test2.dz'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/test2.dz'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/test2.dz/web/index.php'
+    'REMOTE_PORT' => '2788'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/index.php'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1521807182.266
+    'REQUEST_TIME' => 1521807182
+    'argv' => []
+    'argc' => 0
+]
+2018-03-23 15:13:22 [127.0.0.1][-][ff8jhp3e56763rui2f00psh882][error][ParseError] ParseError: syntax error, unexpected '}', expecting ';' in C:\OSPanel\domains\test2.dz\views\site\index.php:28
+Stack trace:
+#0 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#1 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(app\controllers\SiteController))
+#2 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#3 C:\OSPanel\domains\test2.dz\controllers\SiteController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\SiteController->actionIndex()
+#5 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#8 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#9 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\OSPanel\domains\test2.dz\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2018-03-23 15:13:22 [127.0.0.1][-][ff8jhp3e56763rui2f00psh882][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ff8jhp3e56763rui2f00psh882'
+    '_csrf' => '0b65a778ef125b3c381307ef4897b06ac19de8ff3ec545bf83c2f3ad6e73fc0ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kWiWjc2cMviL7y3nlraetOq6lGM3StlQ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'test2.dz'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=ff8jhp3e56763rui2f00psh882; _csrf=0b65a778ef125b3c381307ef4897b06ac19de8ff3ec545bf83c2f3ad6e73fc0ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kWiWjc2cMviL7y3nlraetOq6lGM3StlQ%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.0-x64;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'test2.dz'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/test2.dz'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/test2.dz'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/test2.dz/web/index.php'
+    'REMOTE_PORT' => '2795'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/index.php'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1521807202.139
+    'REQUEST_TIME' => 1521807202
+    'argv' => []
+    'argc' => 0
+]
+2018-03-23 15:13:22 [127.0.0.1][-][ff8jhp3e56763rui2f00psh882][error][ParseError] ParseError: syntax error, unexpected '}', expecting ';' in C:\OSPanel\domains\test2.dz\views\site\index.php:28
+Stack trace:
+#0 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#1 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(app\controllers\SiteController))
+#2 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#3 C:\OSPanel\domains\test2.dz\controllers\SiteController.php(43): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\SiteController->actionIndex()
+#5 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#8 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#9 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\OSPanel\domains\test2.dz\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2018-03-23 15:13:22 [127.0.0.1][-][ff8jhp3e56763rui2f00psh882][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ff8jhp3e56763rui2f00psh882'
+    '_csrf' => '0b65a778ef125b3c381307ef4897b06ac19de8ff3ec545bf83c2f3ad6e73fc0ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kWiWjc2cMviL7y3nlraetOq6lGM3StlQ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'test2.dz'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=ff8jhp3e56763rui2f00psh882; _csrf=0b65a778ef125b3c381307ef4897b06ac19de8ff3ec545bf83c2f3ad6e73fc0ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kWiWjc2cMviL7y3nlraetOq6lGM3StlQ%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.0-x64;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'test2.dz'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/test2.dz'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/test2.dz'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/test2.dz/web/index.php'
+    'REMOTE_PORT' => '2796'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/index.php'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1521807202.851
+    'REQUEST_TIME' => 1521807202
+    'argv' => []
+    'argc' => 0
+]
+2018-03-23 15:13:30 [127.0.0.1][-][ff8jhp3e56763rui2f00psh882][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Cafes::title in C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\db\BaseActiveRecord.php(296): yii\base\Component->__get('title')
+#1 C:\OSPanel\domains\test2.dz\views\site\index.php(26): yii\db\BaseActiveRecord->__get('title')
+#2 [internal function]: yii\base\View->{closure}(Object(app\models\Cafes), 1, 0, Object(yii\widgets\ListView))
+#3 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\widgets\ListView.php(193): call_user_func(Object(Closure), Object(app\models\Cafes), 1, 0, Object(yii\widgets\ListView))
+#4 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\widgets\ListView.php(124): yii\widgets\ListView->renderItem(Object(app\models\Cafes), 1, 0)
+#5 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\widgets\BaseListView.php(160): yii\widgets\ListView->renderItems()
+#6 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\widgets\BaseListView.php(135): yii\widgets\BaseListView->renderSection('{items}')
+#7 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#8 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\widgets\BaseListView.php(138): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#9 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Widget.php(140): yii\widgets\BaseListView->run()
+#10 C:\OSPanel\domains\test2.dz\views\site\index.php(28): yii\base\Widget::widget(Array)
+#11 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\View.php(336): require('C:\\OSPanel\\doma...')
+#12 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\View.php(254): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#13 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(app\controllers\SiteController))
+#14 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#15 C:\OSPanel\domains\test2.dz\controllers\SiteController.php(43): yii\base\Controller->render('index', Array)
+#16 [internal function]: app\controllers\SiteController->actionIndex()
+#17 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#18 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#19 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#20 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#21 C:\OSPanel\domains\test2.dz\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 C:\OSPanel\domains\test2.dz\web\index.php(12): yii\base\Application->run()
+#23 {main}
+2018-03-23 15:13:30 [127.0.0.1][-][ff8jhp3e56763rui2f00psh882][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ff8jhp3e56763rui2f00psh882'
+    '_csrf' => '0b65a778ef125b3c381307ef4897b06ac19de8ff3ec545bf83c2f3ad6e73fc0ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kWiWjc2cMviL7y3nlraetOq6lGM3StlQ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'test2.dz'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=ff8jhp3e56763rui2f00psh882; _csrf=0b65a778ef125b3c381307ef4897b06ac19de8ff3ec545bf83c2f3ad6e73fc0ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kWiWjc2cMviL7y3nlraetOq6lGM3StlQ%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.0-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.0-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.0-x64;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\database\\MySQL-5.6\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'test2.dz'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/test2.dz'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/test2.dz'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/test2.dz/web/index.php'
+    'REMOTE_PORT' => '2797'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/web/index.php'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1521807210.602
+    'REQUEST_TIME' => 1521807210
+    'argv' => []
+    'argc' => 0
+]
