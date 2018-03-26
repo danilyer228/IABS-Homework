@@ -58,6 +58,7 @@ if (empty($params['env'])) {
 }
 
 echo "\n  Start initialization ...\n\n";
+exec("composer install");
 $files = getFileList("$root/environments/{$env['path']}");
 if (isset($env['skipFiles'])) {
     $skipFiles = $env['skipFiles'];
@@ -71,20 +72,6 @@ foreach ($files as $file) {
     }
 }
 
-function executeCommands($root, $commands) {
-    foreach($commands as $command) {
-        $commandForExecute = "cd $root && $command";
-        echo "execute: $commandForExecute\n";
-        exec($commandForExecute, $consoleOutput, $result);
-        foreach($consoleOutput as $line) {
-            echo $line, "\n";
-        }
-        if ($result) {
-            printError("Error $result migrate");
-        }   
-        echo "\n\n";
-    }
-}
 
 $callbacks = ['setCookieValidationKey', 'setWritable', 'setExecutable', 'createSymlink', 'executeCommands'];
 foreach ($callbacks as $callback) {
