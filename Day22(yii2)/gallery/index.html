@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .gallery {
+            width: 800px;
+            margin: 0 auto; 
+            background-color: gray;
+            text-align: center;
+            padding: 20px;
+        }
+        #main-img {
+            max-width: 740px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div id="num" align="center"></div>
+        <img id="main-img" src="gallery/1.jpg" alt="">
+        <div>
+            <button onclick="prev();">prev</button>
+            <button onclick="next();">next</button>         
+        </div>
+    </div>
+    <script>
+        var imgPath = 'gallery/',
+            cur = 1,
+            imgCount = 10,
+            img = document.querySelector('#main-img'),
+            imgExt = '.jpg',
+            num = document.querySelector('#num'),
+            span = document.createElement('span');
+            span.innerHTML = cur;
+            num.appendChild(span);
+        function next(){
+            if (cur == imgCount) cur = 1;
+            else cur++;
+            span.innerHTML = cur;
+            img.src = imgPath + cur + imgExt;
+        }    
+        setTimeout(next, 10*1000);
+        function prev(){
+            if (cur == 1) cur = imgCount;
+            else cur--;
+            span.innerHTML = cur;
+            img.src = imgPath + cur + imgExt;
+        }    
+    </script>
+</body>
+</html>
